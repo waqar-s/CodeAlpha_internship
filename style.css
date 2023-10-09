@@ -1,83 +1,192 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Homemade+Apple&family=Josefin+Slab:wght@600&family=Poppins&family=Plus+Jakarta+Sans:wght@800&family=Montserrat&family=Raleway:wght@800&display=swap");
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+    font-family: var(--font-plus);
+    margin: 0%;
+    padding: 0%;
 }
-body{
-    background: thistle;
+
+/*!sc*/
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+
+    --text-color: #37352f;
+    --text-dim-color: #37352fe5;
+
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --primary: #0078a0;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+
+
+    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+        system-ui, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    --font-plus: "Plus Jakarta Sans", "Calibre", "Inter", "San Francisco",
+        "SF Pro Text", -apple-system, system-ui, sans-serif;
+
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 15px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+
+    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.container{
-    border: 2px solid rebeccapurple;
-    display: block;
-    margin: auto;
-    width: 45%;
-    background: rgb(243, 234, 234);
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-} 
-form{
+
+body {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-     padding: 14px;
-    margin: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-h1{
-    color: rgb(105, 4, 105);
-    text-align: center;
+
+/* ----global setting--------- */
+h1 {
+    color: var(--text-color);
+}
+
+label,
+input {
+    color: var(--text-dim-color);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.primary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    position: relative;
+    padding: 6rem 2rem;
+    padding-bottom: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.062) !important;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    overflow: hidden;
+}
+
+.container .primary-container header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: .4rem 1.5rem;
+    background-color: #F0F0F0;
+    width: 100%;
+}
+
+header h1 {
+    text-align: left;
     padding: 5px;
     margin: 5px;
-}
-label{
-    display: block;
-    color: rgb(105, 4, 105);
-    font-weight: bold;
     font-size: 20px;
-    margin:1px 3px;
-    padding: 3px;
+    font-family: Homemade Apple;
 }
-input{
-    width: 39vw;
-    margin:3px 12px;
-    padding: 8px;
-    color: rgb(105, 4, 105);
-    border:none;
-    font-size: 18px;
-  
-}
-select#services{
-    color: rgb(105, 4, 105);
-    width: 39vw;
-    margin: 15px;
-    padding: 5px;
-    font-weight: bold;
-    border: 2px solid rgb(117, 55, 117);
-    cursor: pointer;
-}
-select#services option{
-    color: rgb(105, 4, 105); 
-    font-size: 15px;
 
-}
-label.radio{
-    font-weight: bold;
-    font-size: 15px;
+label {
     display: block;
-    margin: 10px;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 14px;
+    margin-bottom: .3rem;
 }
-.radio input{
-    cursor: pointer;
-    width: 3vw;
+
+.input {
+    width: 100%;
 }
-button{
-    padding: 8px;
-    margin: 15px;
-    color: white;
-    background: rgb(105, 4, 105); 
+
+input {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.062) !important;
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--text-dim-color);
+}
+
+input:active,
+input:focus,
+select:active,
+select:focus{
+    outline: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+button {
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.062) !important;
+    border-radius: 3px;
+    background-color: #F0F0F0;
+    color: var(--text-dim-color);
     cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    user-select: none;
+    z-index: 999;
+    font-size: 14px;
+    padding: .8rem 1rem;
+    margin-top: 1rem;
 
 }
-button:hover{
-    color: white;
-    background: rgb(131, 34, 131); 
 
+button:hover {
+    background-color: var(--text-dim-color);
+    color: white;
 }
+
+select {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.062) !important;
+    border-radius: 4px;
+    color: var(--text-dim-color) !important;
+    transition: all 0.2s;
+    font-size: 17px !important;
+    width: 100%;
+    cursor: pointer;
+    padding: .5rem 1rem;
+}
+
+select option {
+    padding: 1rem !important;
+    font-size: 15px !important;
+    color: var(--text-dim-color) !important;
+}
+
+@media screen and (max-width:768px) {
+
+    .primary-container {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
