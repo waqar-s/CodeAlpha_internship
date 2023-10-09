@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: thistle;
+}
+.container{
+    border: 2px solid rebeccapurple;
+    display: block;
+    margin: auto;
+    width: 45%;
+    background: rgb(243, 234, 234);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+} 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+     padding: 14px;
+    margin: 12px;
+}
+h1{
+    color: rgb(105, 4, 105);
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+label{
+    display: block;
+    color: rgb(105, 4, 105);
+    font-weight: bold;
+    font-size: 20px;
+    margin:1px 3px;
+    padding: 3px;
+}
+input{
+    width: 39vw;
+    margin:3px 12px;
+    padding: 8px;
+    color: rgb(105, 4, 105);
+    border:none;
+    font-size: 18px;
+  
+}
+select#services{
+    color: rgb(105, 4, 105);
+    width: 39vw;
+    margin: 15px;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(117, 55, 117);
+    cursor: pointer;
+}
+select#services option{
+    color: rgb(105, 4, 105); 
+    font-size: 15px;
+
+}
+label.radio{
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    margin: 10px;
+}
+.radio input{
+    cursor: pointer;
+    width: 3vw;
+}
+button{
+    padding: 8px;
+    margin: 15px;
+    color: white;
+    background: rgb(105, 4, 105); 
+    cursor: pointer;
+
+}
+button:hover{
+    color: white;
+    background: rgb(131, 34, 131); 
+
+}
